@@ -515,6 +515,9 @@ class AriesAgent(DemoAgent):
             qr = QRCode(border=1)
             qr.add_data(invi_rec["invitation_url"])
             log_msg(
+                str(invi_rec["invitation_url"])
+            )
+            log_msg(
                 "Use the following JSON to accept the invite from another demo agent."
                 " Or use the QR code to connect from a mobile agent."
             )

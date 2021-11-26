@@ -398,13 +398,14 @@ async def main(args):
             endorser_role=faber_agent.endorser_role,
         )
 
-        faber_schema_name = "degree schema"
+        faber_schema_name = "stampcard schema"
         faber_schema_attrs = [
             "name",
             "date",
-            "degree",
+            "stampCount",
             "birthdate_dateint",
             "timestamp",
+            "issuer"
         ]
         if faber_agent.cred_type == CRED_FORMAT_INDY:
             faber_agent.public_did = True
