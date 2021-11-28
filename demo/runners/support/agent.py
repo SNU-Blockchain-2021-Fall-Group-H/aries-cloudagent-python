@@ -133,7 +133,10 @@ class DemoAgent:
         aip: int = 20,
         arg_file: str = None,
         endorser_role: str = None,
-        extra_args=None,
+         extra_args=[
+                "--auto-accept-invites",
+                "--auto-accept-requests",
+            ],
         **params,
     ):
         self.ident = ident
