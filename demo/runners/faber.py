@@ -81,7 +81,8 @@ class FaberAgent(AriesAgent):
             self.cred_attrs[cred_def_id] = {
                 "name": "Alice Smith",
                 "date": "2018-05-28",
-                "degree": "Maths",
+                "issuer": "Faber cafe",
+                "stampcount" : "1",
                 "birthdate_dateint": birth_date.strftime(birth_date_format),
                 "timestamp": str(int(time.time())),
             }
@@ -402,7 +403,7 @@ async def main(args):
         faber_schema_attrs = [
             "name",
             "date",
-            "stampCount",
+            "stampcount",
             "birthdate_dateint",
             "timestamp",
             "issuer"
