@@ -83,6 +83,7 @@ class FaberAgent(AriesAgent):
                 "date": "2018-05-28",
                 "issuer": "Faber cafe",
                 "stampcount" : "1",
+                "rewardspend" : "0",
                 "birthdate_dateint": birth_date.strftime(birth_date_format),
                 "timestamp": str(int(time.time())),
             }
@@ -404,6 +405,7 @@ async def main(args):
             "name",
             "date",
             "stampcount",
+            "rewardspend",
             "birthdate_dateint",
             "timestamp",
             "issuer"
