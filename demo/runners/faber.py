@@ -85,7 +85,7 @@ class FaberAgent(AriesAgent):
                 "stampcount" : "1",
                 "rewardspend" : "0",
                 "birthdate_dateint": birth_date.strftime(birth_date_format),
-                "timestamp": str(int(time.time())),
+                "timestamp": str(int(time.time()))
             }
 
             cred_preview = {
@@ -182,18 +182,18 @@ class FaberAgent(AriesAgent):
             req_attrs = [
                 {
                     "name": "name",
-                    "restrictions": [{"schema_name": "degree schema"}],
+                    "restrictions": [{"schema_name": "stampcard schema"}],
                 },
                 {
                     "name": "date",
-                    "restrictions": [{"schema_name": "degree schema"}],
+                    "restrictions": [{"schema_name": "stampcard schema"}],
                 },
             ]
             if revocation:
                 req_attrs.append(
                     {
                         "name": "degree",
-                        "restrictions": [{"schema_name": "degree schema"}],
+                        "restrictions": [{"schema_name": "stampcard schema"}],
                         "non_revoked": {"to": int(time.time() - 1)},
                     },
                 )
@@ -201,7 +201,7 @@ class FaberAgent(AriesAgent):
                 req_attrs.append(
                     {
                         "name": "degree",
-                        "restrictions": [{"schema_name": "degree schema"}],
+                        "restrictions": [{"schema_name": "stampcard schema"}],
                     }
                 )
             if SELF_ATTESTED:
@@ -215,7 +215,7 @@ class FaberAgent(AriesAgent):
                     "name": "birthdate_dateint",
                     "p_type": "<=",
                     "p_value": int(birth_date.strftime(birth_date_format)),
-                    "restrictions": [{"schema_name": "degree schema"}],
+                    "restrictions": [{"schema_name": "stampcard schema"}],
                 }
             ]
             indy_proof_request = {
